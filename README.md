@@ -19,7 +19,8 @@
 - To get started
 - Classify Leopard Gecko Morph
 - Classify Leopard Gecko Eye
--
+- Classify Leopard Gecko Gender
+- Classify Nephrurus levis Pilbarensis Morph
 
 ## To get started...
 - Just open index.html with your browser 🌐
@@ -56,3 +57,20 @@
     - Sliver Eyes - Normal
     - Eclipse Eyes
     - Eclipse Snake Eyes
+    
+    
+## ⚥ Classify Leopard Gecko Gender
+
+<p align="center">
+<img src="https://i.imgur.com/kNdoxkF.gif">
+</p>
+
+## 🦎 Classify Nephrurus levis Pilbarensis Morph
+<p align="center">
+<img src="https://i.imgur.com/nP8Eepb.gif">
+</p>
+- **Supported morphs list**
+    - Normal
+    - Albino
+    - Patternless
+    - Albino Patternless
