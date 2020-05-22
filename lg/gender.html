@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Reptile Lens</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/icon.png">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK:100,300,400&amp;subset=chinese-hongkong">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">!-->
+<script data-ad-client="ca-pub-4544746623416744" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153840813-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153840813-1');
+</script>
+</head>
+
+<body style="overflow-x: hidden;">
+    <div id="loading" class="overlay center"><span class="spinner-border spinner-border-sm" role="status" style="font-size: 26px;width: 50px;height: 50px;color: rgb(255,255,255);"></span></div>
+    <div class="container" style="padding-top: 20px;"><a href="index.html"><i class="material-icons" data-bs-hover-animate="pulse" style="color: #484e53;font-size: 25px;">keyboard_backspace</i></a></div>
+    <div class="container footer-basic" style="margin-top: -35px;">
+        <div class="row">
+            <div class="col-12 col-md-12 offset-0 center" style="margin-bottom: 19px;padding-top: 75px;"><span style="font-family: Montserrat, sans-serif;font-size: 20px;padding-bottom: 35px;"><img class="img-fluid" src="../assets/img/icon.png" style="width: 40px;"><span style="font-family: Montserrat, sans-serif;/*padding-top: 37px!important;*/font-size: 25px;letter-spacing: -1px;padding-left: 5px;"><strong>&nbsp;Reptile Lens</strong><br></span></span>
+            </div>
+        </div>
+        <div class="row" style="margin-top: -30px;">
+            <div class="col-12 offset-0 center" style="padding-bottom: 5px;">
+                <p id="txt_a" style="font-family: Montserrat, sans-serif;/*padding-top: 37px!important;*/font-size: 16px;">Identify Leopard Gecko Gender </p>
+            </div>
+        </div>
+        <div id="editor_row" style="display: none;">
+            <div id="editor"></div>
+            <div class="center" style="margin-top: 15px;margin-bottom: 15px;">
+                <div class="row">
+                    <div class="col"><i class="material-icons" data-bs-hover-animate="pulse" id="btn_edit_close" style="color: #484e53;font-size: 25px;padding-left: 20p;">close</i></div>
+                    <div class="col"><i class="material-icons" data-bs-hover-animate="pulse" id="btn_edit_ok" style="color: #484e53;font-size: 25px;">check</i></div>
+                    <div class="col"><i class="material-icons" data-bs-hover-animate="pulse" id="btn_edit_rotate" style="color: #484e53;font-size: 25px;">rotate_90_degrees_ccw</i></div>
+                    <div class="col"><i class="material-icons" data-bs-hover-animate="pulse" id="btn_edit_zoom_out" style="color: #484e53;font-size: 25px;">zoom_out_map</i></div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="btn_row">
+            <div class="col-12 col-md-3 col-lg-2 col-xl-2 offset-0 offset-md-3 offset-lg-4 offset-xl-4 item social"><script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.4/croppie.css"
+    integrity="sha256-M8o9uqnAVROBWo3/2ZHSIJG+ZHbaQdpljJLLvdpeKcI=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.4/croppie.js"
+    integrity="sha256-u/CKfMqwJ0rXjD4EuR5J8VltmQMJ6X/UQYCFA4H9Wpk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"
+    integrity="sha256-dhm9R4pgGAdElt/Z8BnKk9fsaEtqSz11u0+FwCIXHy4=" crossorigin="anonymous"></script>
+
+<input type="file" id="input_a" style="display: none" accept="image/*" />
+
+<input type="file" id="input_b" style="display: none" accept="image/*" capture>
+
+<img id="pic_a" style="display: none" src="#"></img>
+
+
+
+<script>
+
+    var w = $(window).width(),
+        h = $(window).height();
+
+    var editor = document.getElementById('editor');
+    var resize = new Croppie(editor, {
+        viewport: {
+            width: 300,
+            height: 300,
+        },
+        boundary: {
+            width: 300,
+            height: 300
+        },
+        showZoomer: true,
+        enableExif: true,
+        enableOrientation: true
+    });
+
+    function show_loading(bool) {
+        if (bool == true) {
+            document.getElementById("loading").setAttribute('style', 'z-index:1000 !important; background-color: rgba(0,0,0,0.71);');
+        } else {
+            document.getElementById("loading").setAttribute('style', 'z-index:-1000 !important; background-color: white!important;');
+        }
+    }
+
+    function hide_el(id) {
+        document.getElementById(id).setAttribute('style', 'display:none !important;');
+    }
+    function show_el(id) {
+        document.getElementById(id).setAttribute('style', 'display:block !important;');
+    }
+
+    function show_image(input) {
+
+        var FR = new FileReader();
+
+        FR.addEventListener("load", function (e) {
+            //document.getElementById("pic_a").src = e.target.result;
+            resize.bind({
+                url: e.target.result,
+            });
+            $('#btn_row').hide();
+            show_el("editor_row");
+            $('.cr-viewport').append('<img src="../assets/img/lg_sex_outline.svg" style="width: 300px;height: 300px;"><img src="../assets/img/lg_sex.svg" style="width: 300px;height: 300px;">'); document.getElementById("editor_row").scrollIntoView();
+
+        });
+
+        FR.readAsDataURL(this.files[0]);
+
+    }
+
+    document.getElementById("input_a").addEventListener("change", show_image);
+    document.getElementById("input_b").addEventListener("change", show_image);
+
+    $(function () {
+
+        hide_el("editor_row");
+        show_loading(true);
+
+        $("#btn_edit_ok").click(function () {
+
+            show_loading(true);
+
+            resize.result('canvas').then(function (blob) {
+
+                document.getElementById("pic_a").src = blob;
+
+                try {
+
+                    localStorage.setItem("image", blob); //see if the image is small eough to save
+
+                }
+
+                catch (e) {
+                    console.log("Local Storage is full, can't preview image to next page");
+                    localStorage.setItem("image", "#");
+                    // fires When localstorage gets full
+                    // you can handle error here or empty the local storage
+                }
+
+                predict(); //start perdict
+
+            });
+
+        });
+
+        //btn_edit_zoom_out
+
+        $("#btn_edit_zoom_out").click(function () {
+            resize.setZoom(0);
+        });
+
+
+        $("#btn_edit_rotate").click(function () {
+            resize.rotate(90);
+        });
+
+        $("#btn_edit_close").click(function () {
+            $('#btn_row').show();
+            hide_el("editor_row");
+        });
+
+        $("#btn_a").click(function () {
+            $('#input_a').click();
+        });
+
+        $("#btn_b").click(function () {
+            $('#input_b').click();
+        });
+
+        $("#lang_eng").click(function () {
+            localStorage.setItem("lang", "eng");
+            location.reload();
+        });
+
+        $("#lang_chi").click(function () {
+            localStorage.setItem("lang", "chi");
+            location.reload();
+        });
+
+        lang_init();
+    });
+
+    let imageModelURL = 'https://teachablemachine.withgoogle.com/models/KWuQaJT_/';
+
+    const classifier = ml5.imageClassifier(imageModelURL + 'model.json', modelLoaded);
+
+    // When the model is loaded
+    function modelLoaded() {
+        console.log('Model Loaded!');
+        show_loading(false);
+    }
+
+    var prop_total = 0;
+    var prediction;
+    const per_type = "lg_gender";
+    function predict() {
+
+        classifier.predict(document.getElementById('pic_a'), function (err, results) {
+            console.log(results);
+            prediction = results;
+            for (let i = 0; i < prediction.length; i++) {
+                prop_total = prop_total + prediction[i].confidence;
+            }
+
+            localStorage.setItem("perdict", JSON.stringify(prediction));
+            localStorage.setItem("total", prop_total); localStorage.setItem("type", per_type);
+            window.location.href = "../report_gender.html";
+        });
+
+
+    }
+
+    var lang = localStorage.getItem("lang");
+
+    function lang_init() {
+        if (localStorage.getItem("lang") === null) {
+            localStorage.setItem("lang", "eng");
+        }
+
+        if (localStorage.getItem("lang") !== null) {
+            if (lang == "chi") {
+                $("#txt_a").text("豹紋守宮性別辨識");
+                document.getElementById("txt_a").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif;");
+                $("#txt_b").text("上傳圖片");
+                document.getElementById("txt_b").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif;");
+
+                $("#txt_c").text("拍攝影像");
+
+                document.getElementById("txt_c").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif;");
+
+                $("#footer_home").text("主頁");
+                document.getElementById("footer_home").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif; font-size: 12px;margin-bottom: -6px;margin-top: 5px;color: #484e53;");
+            }
+        }
+
+    }
+
+</script><a data-bs-hover-animate="pulse" id="btn_a" class="item social" href="#"><i class="icon-cloud-upload" style="font-size: 55px;/*line-height: 92px;*/"></i></a>
+                <div style="padding-top: 10px;"><span id="txt_b" style="font-family: Montserrat, sans-serif;/*padding-top: 37px!important;*/font-size: 16px;">Upload Image<br></span></div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-2 col-xl-2 offset-0 offset-xl-0 item social"><a data-bs-hover-animate="pulse" id="btn_b" class="item social" href="#"><i class="icon-camera" style="font-size: 55px;"></i></a>
+                <div style="padding-top: 10px;"><span id="txt_c" style="font-family: Montserrat, sans-serif;/*padding-top: 37px!important;*/font-size: 16px;">Capture&nbsp;<br></span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 offset-0 center" style="padding-bottom: 10px;">
+                <p class="text-center" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">V 1.0 Alpha |&nbsp;<br></p>
+                <a href="index.html">
+                    <p class="text-center" id="footer_home" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;color: #484e53;">Home</p>
+                </a>
+                <p class="text-center" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">&nbsp;|&nbsp;<br></p>
+                <p class="text-center" id="lang_eng" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">English<br></p>
+                <p class="text-center" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">&nbsp;|&nbsp;<br></p>
+                <p class="text-center" id="lang_chi" style="font-family: 'Noto Sans HK', sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">中文版<br></p>
+            </div>
+            <div class="col-12 col-xl-12 offset-0 offset-xl-0 center"><span style="font-family: Montserrat, sans-serif;/*padding-top: 37px!important;*/font-size: 10px;">Elvin Chu © 2019<br></span></div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/script.min.js"></script>
+</body>
+
+</html>

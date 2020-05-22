@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Reptile Lens</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/icon.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK:100,300,400&amp;subset=chinese-hongkong">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">!-->
+<script data-ad-client="ca-pub-4544746623416744" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153840813-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153840813-1');
+</script>
+</head>
+
+<body style="overflow-x: hidden;background-color: #f5f6fa;">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col" style="padding-bottom: 20px;padding-top: 25px;"><a href="javascript:history.back()"><i class="material-icons" data-bs-hover-animate="pulse" style="font-size: 25px;color: #000000;margin-top: -2px;">keyboard_backspace</i></a><span id="txt_a" style="font-size: 23px;font-family: Montserrat, sans-serif;font-weight: normal;letter-spacing: -1px;"><br>Summary Report<br></span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xl-12" style="padding-bottom: 35px;margin-bottom: -15px;">
+                    <div role="tablist" id="image_dropdown" style="border: 0;border-bottom: 0;border-radius: 0;">
+                        <div class="card">
+                            <div class="card-header" role="tab" style="border: 0;background-color: #fff;"><style>
+    .accordion {
+  .card:not(:first-of-type):not(:last-of-type) {
+    border-bottom: 0;
+    border-radius: 0;
+  }
+
+  .card:not(:first-of-type) {
+    .card-header:first-child {
+      border-radius: 0;
+    }
+  }
+
+  .card:first-of-type {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .card:last-of-type {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+</style>
+                                <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="image_dropdown .item-1" href="#image_dropdown .item-1" style="cursor: pointer;display: block;"><i class="material-icons" style="color: rgb(98,98,98);">keyboard_arrow_down</i></a></h5>
+                            </div>
+                            <div class="collapse item-1" role="tabpanel" data-parent="#image_dropdown" style="background-color: #fff;">
+                                <div class="card-body"><img class="img-fluid" id="preview"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-bottom: 35px;">
+                    <div class="card" style="border: 0px;">
+                        <div class="card-body" style="/*border: 0;*/">
+                            <h4 class="card-title" id="chart1_txt_a" style="font-family: Montserrat, sans-serif;font-size: 20px;margin-bottom: 0px;letter-spacing: -0.5px;"><strong>Loading...</strong></h4><span id="txt_b" style="color: rgb(96,96,96);font-family: Montserrat, sans-serif;font-size: 15px;letter-spacing: -0.5px;">Most Similar&nbsp;<br></span>
+                            <div style="padding-bottom: 30px;padding-top: 20px;">         <div class="chartjs-wrapper">
+           <canvas id="chart1"></canvas>
+             <div class="absolute-center text-center">
+    <p style="font-weight: 100;
+    margin-top: 55px;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;" id="chart1_txt_b">Loading...</p>
+  </div>
+         </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-bottom: 35px;">
+                    <div class="card" style="border: 0px;">
+                        <div class="card-body" style="/*border: 0;*/">
+                            <h4 class="card-title" id="chart2_txt_a" style="font-family: Montserrat, sans-serif;font-size: 20px;margin-bottom: 0px;letter-spacing: -0.5px;"><strong>Loading...</strong><br></h4><span id="txt_c" style="color: rgb(96,96,96);font-family: Montserrat, sans-serif;font-size: 15px;letter-spacing: -0.5px;">More&nbsp;Similar<br></span>
+                            <div style="padding-bottom: 30px;padding-top: 20px;">         <div class="chartjs-wrapper">
+           <canvas id="chart2"></canvas>
+             <div class="absolute-center text-center">
+    <p style="font-weight: 100;
+    margin-top: 55px;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;" id="chart2_txt_b">Loading...</p>
+  </div>
+         </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-bottom: 35px;">
+                    <div class="card" style="border: 0px;">
+                        <div class="card-body" style="/*border: 0;*/">
+                            <h4 class="card-title" id="chart3_txt_a" style="font-family: Montserrat, sans-serif;font-size: 20px;margin-bottom: 0px;letter-spacing: -0.5px;"><strong>Loading...</strong><br></h4><span id="txt_d" style="color: rgb(96,96,96);font-family: Montserrat, sans-serif;font-size: 15px;letter-spacing: -0.5px;">Similar&nbsp;<br></span>
+                            <div style="padding-bottom: 30px;padding-top: 20px;">         <div class="chartjs-wrapper">
+           <canvas id="chart3"></canvas>
+             <div class="absolute-center text-center">
+    <p style="font-weight: 100;
+    margin-top: 55px;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;" id="chart3_txt_b">Loading...</p>
+  </div>
+         </div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <a href="https://forms.gle/KSPaSZr8Gicp2PPX9">
+                        <p class="text-center" id="txt_e" style="font-family: Montserrat, sans-serif;letter-spacing: -0.2px;font-size: 16px;color: rgb(120,130,139);/*text-decoration-color: rgb(120,130,139)!important;*/">Not The Right One ?<br></p>
+                    </a>
+                    <div class="row">
+                        <div class="col-12 offset-0 center" style="padding-bottom: 10px;">
+                            <p class="text-center" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">V 1.0 Alpha |&nbsp;<br></p>
+                            <a href="index.html">
+                                <p class="text-center" id="footer_home" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;color: #484e53;">Home</p>
+                            </a>
+                            <p class="text-center" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">&nbsp;|&nbsp;<br></p>
+                            <p class="text-center" id="lang_eng" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">English<br></p>
+                            <p class="text-center" style="font-family: Montserrat, sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">&nbsp;|&nbsp;<br></p>
+                            <p class="text-center" id="lang_chi" style="font-family: 'Noto Sans HK', sans-serif;letter-spacing: 0px;font-size: 12px;margin-bottom: -6px;margin-top: 5px;">中文版<br></p>
+                        </div>
+                        <div class="col-12 col-xl-12 offset-0 offset-xl-0 center"><span style="font-family: Montserrat, sans-serif;/*padding-top: 37px!important;*/font-size: 10px;">Elvin Chu © 2019<br></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 center" style="margin-bottom: 15px;padding-top: 16px;padding-bottom: 15px;"><a href="index.html" style="text-decoration: none!important;"><img class="img-fluid" src="assets/img/icon.png" style="width: 35px;filter: grayscale(0%);"><span style="font-family: Montserrat, sans-serif;/*padding-top: 37px!important;*/font-size: 20px;letter-spacing: -1px;padding-left: 5px;color: rgb(75,76,77);"><strong>&nbsp;Reptile Lens</strong><br></span></a></div>
+    <div
+        class="col" style="margin-bottom: -10px;">
+        <p class="text-center" id="txt_f" style="font-family: Montserrat, sans-serif;letter-spacing: -0.2px;font-size: 10px;margin-top: -15px;">The information and data provided are for reference only and should not be relied upon as professional advice.<br></p>
+        </div><script>
+
+    // localStorage.getItem("type");
+    //nlp_morph
+    //lg_morph
+    //lg_eye
+
+    var lg_morph = [
+        {
+            "en": "Lemon Frost",
+            "zh_tw": "檸檬霜"
+        },
+        {
+            "en": "Bandit",
+            "zh_tw": "土匪"
+        },
+        {
+            "en": "Bold Stripe",
+            "zh_tw": "粗直線"
+        },
+        {
+            "en": "Normal",
+            "zh_tw": "普通"
+        },
+        {
+            "en": "Super Snow",
+            "zh_tw": "超級雪花"
+        },
+        {
+            "en": "Snow",
+            "zh_tw": "雪花"
+        },
+        {
+            "en": "Super Galaxy",
+            "zh_tw": "超級銀河"
+        },
+        {
+            "en": "Super Hypo",
+            "zh_tw": "超級少斑"
+        },
+        {
+            "en": "Super Hypo Tangerine Carrot Tail",
+            "zh_tw": "超級少斑橙化蘿蔔尾"
+        },
+        {
+            "en": "Melanistic",
+            "zh_tw": "黑化"
+        },
+        {
+            "en": "Super Galaxy Pied",
+            "zh_tw": "超級銀河派"
+        }
+    ];
+
+    var lg_eye = [
+    {
+            "en": "Lemon Frost Eyes",
+            "zh_tw": "檸檬霜眼"
+        },
+        {
+            "en": "Noir Desir Eyes",
+            "zh_tw": "慾望黑眼"
+        },
+        {
+            "en": "Sliver Eyes - Normal",
+            "zh_tw": "普通眼"
+        },
+        {
+            "en": "Eclipse Eyes",
+            "zh_tw": "日蝕眼"
+        },
+        {
+            "en": "Eclipse Snake Eyes",
+            "zh_tw": "日蝕蛇眼"
+        }
+    ];
+
+    var nlp_morph = [
+    {
+            "en": "Normal",
+            "zh_tw": "普通"
+        },
+        {
+            "en": "Albino",
+            "zh_tw": "白化"
+        },
+        {
+            "en": "Patternless",
+            "zh_tw": "無紋"
+        },
+        {
+            "en": "Albino Patternless",
+            "zh_tw": "白化無紋"
+        }
+    ];
+
+    var getObjectByValue = function (array, key, value) {
+        return array.filter(function (object) {
+            return object[key] === value;
+        });
+    };
+
+    function translate(keyword) {
+
+        if (lang == "chi") {
+
+            return getObjectByValue(window[localStorage.getItem("type")], "en", keyword)[0].zh_tw;
+
+        }
+        else {
+
+            return getObjectByValue(window[localStorage.getItem("type")], "en", keyword)[0].en;
+
+        }
+    }
+
+
+
+</script><script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+<style>
+    .chart-wrapper {
+        background-color: #f5f6fa;
+        padding: 20px;
+    }
+
+    .chartjs-wrapper {
+        oveflow: hidden;
+        width: 100%;
+    }
+
+    .chartjs-wrapper canvas {
+        max-height: 100% !important;
+    }
+
+    .relative {
+        position: relative;
+    }
+
+    .absolute-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text-center {
+        text-align: center;
+    }
+</style>
+<script>
+    var perdict = JSON.parse(localStorage.getItem("perdict"));
+    var total = localStorage.getItem("total");
+    var image = localStorage.getItem("image");
+    document.getElementById("preview").src = image;
+
+    var opt_chart = {
+        segmentShowStroke: false,
+        cutoutPercentage: 70,
+        animation: {
+            animationRotate: true,
+            duration: 2000
+        },
+        legend: {
+            display: false
+        },
+        tooltips: {
+            enabled: false
+        }
+    };
+
+
+    var charta = new Chart(document.getElementById("chart1").getContext('2d'), {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [perdict[0].confidence, total - perdict[0].confidence],
+                backgroundColor: [
+                    "#4c84ff",
+                    "#00000015"
+                ],
+                borderWidth: [0, 0]
+
+            }]
+        },
+        options: opt_chart
+    });
+
+    var chartb = new Chart(document.getElementById("chart2").getContext('2d'), {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [perdict[1].confidence, total - perdict[1].confidence],
+                backgroundColor: [
+                    "#ffc107",
+                    "#00000015"
+                ],
+                borderWidth: [0, 0]
+
+            }]
+        },
+        options: opt_chart
+    });
+
+    var chartc = new Chart(document.getElementById("chart3").getContext('2d'), {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [perdict[2].confidence, total - perdict[2].confidence],
+                backgroundColor: [
+                    "#20c997",
+                    "#00000015"
+                ],
+                borderWidth: [0, 0]
+
+            }]
+        },
+        options: opt_chart
+    });
+
+
+    $(function () {
+    
+     if (preview.src == window.location.href +"#") {
+        document.getElementById("image_dropdown").style.display = "none";
+        }
+        
+        $("#lang_eng").click(function () {
+            localStorage.setItem("lang", "eng");
+            location.reload();
+        });
+
+        $("#lang_chi").click(function () {
+            localStorage.setItem("lang", "chi");
+            location.reload();
+        });
+
+        lang_init();
+
+        $("#chart1_txt_a").text(translate(perdict[0].label));
+        $("#chart2_txt_a").text(translate(perdict[1].label));
+        $("#chart3_txt_a").text(translate(perdict[2].label));
+        $("#chart1_txt_b").text(((perdict[0].confidence / total) * 100).toFixed(1) + '%');
+        $("#chart2_txt_b").text(((perdict[1].confidence / total) * 100).toFixed(1) + '%');
+        $("#chart3_txt_b").text(((perdict[2].confidence / total) * 100).toFixed(1) + '%');
+    });
+
+
+    var lang = localStorage.getItem("lang");
+
+    function lang_init() {
+
+        if (localStorage.getItem("lang") === null) {
+            localStorage.setItem("lang", "eng");
+        }
+
+        if (localStorage.getItem("lang") !== null) {
+            if (lang == "chi") {
+                $("#txt_a").text("摘要報告");
+                document.getElementById("txt_a").setAttribute('style', "font-size: 25px; font-family: 'Noto Sans HK', sans-serif; display: block;");
+                $("#txt_b").text("最相似");
+                document.getElementById("txt_b").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif;color: rgb(96,96,96);");
+                $("#txt_c").text("較相似");
+                document.getElementById("txt_c").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif;color: rgb(96,96,96);");
+                $("#txt_d").text("相似");
+                document.getElementById("txt_d").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif;color: rgb(96,96,96);");
+                $("#txt_e").text("不正確嗎？");
+                
+               document.getElementById("txt_e").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif; color: rgb(120,130,139);");
+                $("#txt_f").text("提供的信息和數據僅供參考 不應作為專業建議");
+                document.getElementById("txt_f").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif; font-size: 10px; font-color:rgb(121, 121, 121);");
+                
+                    $("#footer_home").text("主頁");
+                document.getElementById("footer_home").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif; font-size: 12px;margin-bottom: -6px;margin-top: 5px;color: #484e53;");
+                
+                document.getElementById("chart1_txt_a").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif; margin-bottom: auto!important;");
+                
+                document.getElementById("chart2_txt_a").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif; margin-bottom: auto!important;");
+                
+                document.getElementById("chart3_txt_a").setAttribute('style', "font-family: 'Noto Sans HK', sans-serif; margin-bottom: auto!important;");
+                
+                
+            }
+        }
+
+    }
+
+</script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
