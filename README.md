@@ -79,3 +79,5 @@ https://lens.reptilehk.com/
     - Albino
     - Patternless
     - Albino Patternless
+
+<h5 align="center">All models are trained with teachable machine!</h5>
