@@ -13,7 +13,7 @@ https://lens.reptilehk.com/
  <img  src="https://badgen.net/github/license/micromatch/micromatch">
  <img src="https://badgen.net/badge/Version/1.0/orange?icon=label">
  <img src="https://badgen.net/badge/Made%20With/Javascript/yellow?icon=label">
- <img src="https://badgen.net/badge/Made%20With/Tensorflow.js/purple?icon=label">
+ <img src="https://badgen.net/badge/Made%20With/ML5.js/purple?icon=label">
 </p>
 
 <h5 align="center">If you like it, please star ⭐ this repository!</h5>
